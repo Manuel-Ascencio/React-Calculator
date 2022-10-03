@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./App.css";
+import { FiDelete } from "react-icons/fi";
+
 function App() {
-  const [result, setResult] = useState("3");
+  const [result, setResult] = useState("");
 
   const clear = () => {
     setResult("");
@@ -27,58 +29,58 @@ function App() {
     <div className="App">
       <div className="container">
         <form>
-          <input type="text" value={result} />
+          <input type="text" value={result} readOnly="readonly" />
         </form>
         <div className="keys">
           <button onClick={clear} id="clear">
-            Clear
+            AC
           </button>
-          <button onClick={backspace} id="">
-            C
+          <button onClick={backspace} id="del">
+            <FiDelete />
           </button>
           <button name="/" onClick={handeClick} id="divide">
             &divide;
           </button>
-          <button name="7" onClick={handeClick} id="seven">
+          <button name="7" onClick={handeClick}>
             7
           </button>
-          <button name="8" onClick={handeClick} id="eight">
+          <button name="8" onClick={handeClick}>
             8
           </button>
-          <button name="9" onClick={handeClick} id="nine">
+          <button name="9" onClick={handeClick}>
             9
           </button>
           <button name="*" onClick={handeClick} id="multiply">
             &times;
           </button>
-          <button name="4" onClick={handeClick} id="four">
+          <button name="4" onClick={handeClick}>
             4
           </button>
-          <button name="5" onClick={handeClick} id="five">
+          <button name="5" onClick={handeClick}>
             5
           </button>
-          <button name="6" onClick={handeClick} id="six">
+          <button name="6" onClick={handeClick}>
             6
           </button>
-          <button name="-" onClick={handeClick} id="subtract">
+          <button name="-" onClick={handeClick} id="less">
             &ndash;
           </button>
-          <button name="1" onClick={handeClick} id="one">
+          <button name="1" onClick={handeClick}>
             1
           </button>
-          <button name="2" onClick={handeClick} id="two">
+          <button name="2" onClick={handeClick}>
             2
           </button>
-          <button name="3" onClick={handeClick} id="three">
+          <button name="3" onClick={handeClick}>
             3
           </button>
           <button name="+" onClick={handeClick} id="add">
             +
           </button>
-          <button name="0" onClick={handeClick} id="zero">
+          <button name="0" onClick={handeClick}>
             0
           </button>
-          <button name="." onClick={handeClick} id="decimal">
+          <button name="." onClick={handeClick}>
             .
           </button>
           <button onClick={calculate} id="equals">
